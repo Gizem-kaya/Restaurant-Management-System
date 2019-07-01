@@ -29,7 +29,7 @@ should have name, cost, and amount information which states its name, cost, and 
 amount, respectively.
 
 
-Initialization
+# Initialization
 
 Software should not take any parameter as argument but rather perform first some setup
 operations considering a provided input file, named setup.dat. This file always contains
@@ -38,16 +38,16 @@ add employer (to add a person as employer), and add waiter (to add a person as w
 Below, detailed description of each command is provided with its syntax:
 
 
- add item: It takes item name, cost for a single item, and number of items that is
+* add item: It takes item name, cost for a single item, and number of items that is
 added into the stock as arguments.
 add item [Name];[Cost];[Amount]
 
 
- add employer: It takes employer’s name as well as salary.
+* add employer: It takes employer’s name as well as salary.
 add employer [Name];[Salary]
 
 
- add waiter: It is similar to addition of a new employer and takes two inputs corresponding waiter’s name and salary.
+* add waiter: It is similar to addition of a new employer and takes two inputs corresponding waiter’s name and salary.
 add waiter [Name];[Salary]
 After it completes initial setup progress, it take another input file, named commands.dat,
 comprising of a set of commands each of which yields different production. In the following;
@@ -55,10 +55,10 @@ each command, with its syntax, is described in detail.
 
 
 
-Commands
+# Commands
 
 
- create table [EMPLOYER NAME];[CAPACITY]: It creates a new table. It should
+* create table [EMPLOYER NAME];[CAPACITY]: It creates a new table. It should
 be initial command so that the remaining commands become meaningful. It takes only
 two parameters; one for name that represents employer as creator, and other for the
 capacity stating maximum number of customer it can take for service.
@@ -84,7 +84,7 @@ PROGRESSING COMMAND: create_table
 elif has already created ALLOWED_MAX_TABLES tables!
 
 
- new order [WAITER NAME];[#CUSTOMER];[ITEM NAME]-[ORDER COUNT]: It states
+* new order [WAITER NAME];[#CUSTOMER];[ITEM NAME]-[ORDER COUNT]: It states
 the initial order and used when a new customer arrives at the restaurant. Therefore a
 free and appropriate table should first be allocated with this command. It takes three
 parameters. The first represents waiter’s name, the second indicates the number of
@@ -130,12 +130,9 @@ PROGRESSING COMMAND: new_order
 Table (= ID 3) has been taken into service
 Unknown item Waffle
 Item Tea added into order
- add order [WAITER NAME];[TABLE ID];[ITEM NAME]-[ORDER COUNT]: Similar
-to new order, it inserts another order into a given table which should already be in
-service. The same warnings in new order should also be displayed in this command except the one regarding MAX TABLE SERVICES as no new table is currently being taken
-into service. Special to this command, an appropriate message should be displayed as
-below in the case where a given table is not currently in service or where a waiter other
-than the one first operated to this table attempts to operate further orders!
+
+* add order [WAITER NAME];[TABLE ID];[ITEM NAME]-[ORDER COUNT]: Similar to new order, it inserts another order into a given table which should already be in service. The same warnings in new order should also be displayed in this command except the one regarding MAX TABLE SERVICES as no new table is currently being taken into service. Special to this command, an appropriate message should be displayed as
+below in the case where a given table is not currently in service or where a waiter other than the one first operated to this table attempts to operate further orders!
 
 Input:
 add_order kemal;0;Water-1:Coffee-1
@@ -155,7 +152,7 @@ PROGRESSING COMMAND: add_order
 Not allowed to exceed max number of orders!
 
 
- check out [WAITER NAME];[TABLE ID]: It indicates a case where customers taking service at table TABLE ID want to checkout. As expressed in previous command,
+* check out [WAITER NAME];[TABLE ID]: It indicates a case where customers taking service at table TABLE ID want to checkout. As expressed in previous command,
 only waiter who operated to table with TABLE ID is allowed to carry out this command,
 otherwise appropriate message should be displayed.
 
@@ -178,7 +175,7 @@ Output:
 There is no waiter named kemal
 
 
- stock status: It simply displays the stock amount of all items.
+* stock status: It simply displays the stock amount of all items.
 Input:
 stock_status
 Output:
@@ -196,7 +193,7 @@ should be displayed in insertion order.
 
 
 
- get table status: It prints out all created tables with its current status (Free, or
+* get table status: It prints out all created tables with its current status (Free, or
 Reserved) in an insertion order as below. Note that, waiter’s name should also be
 displayed in the case Reserved.
 
@@ -208,7 +205,7 @@ Table 1: Free
 Table 2: Reserved (kemal)
 
 
- get order status: It prints out information regarding table-order-item trio in an
+* get order status: It prints out information regarding table-order-item trio in an
 insertion order as below. Note that, table should also be displayed even if it is not
 currently in service.
 
@@ -228,7 +225,7 @@ Table: 2
 3 item(s)
 
 
- get employer salary: In order to improve motivation, employers (as well as waiter)
+* get employer salary: In order to improve motivation, employers (as well as waiter)
 are awarded (as additional payment to their salary) every time they create a table. Total
 award (A) for an employer e should be calculated as follows:
                             Ae = Te × Se × 0.1
@@ -246,7 +243,7 @@ Salary for zeynep: 3000.0
 Salary for kamil: 3000.0
 
 
- get waiter salary: It is very similar to get employer salary but differs only in
+* get waiter salary: It is very similar to get employer salary but differs only in
 calculation, which should now be as follows for a waiter w:
                             Aw = Ow × Sw × 0.05
 where Ow is total number of orders operated by waiter w. As in previous command,
