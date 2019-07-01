@@ -5,7 +5,7 @@ public class Orders {
 	private int totalItemCount;				// the order's total item count
 	public Items[] items;					// the order's Items objects array
 	
-	public int getTotalItemCount() { return totalItemCount;}					// get the order's item counts
+	public int getTotalItemCount() { return totalItemCount;}			// get the order's item counts
 	public void setTotalItemCount(int count) {this.totalItemCount = count;}		// set the order's item counts
 	
 	private void incrementItemCount() {this.totalItemCount = this.totalItemCount + 1;}	//increment the order's item counts by 1
@@ -20,7 +20,7 @@ public class Orders {
 		
 	}
 	
-	public Items[] addItem(String itemsName, double cost, int stockCount) {				// creates an Items object and set the attributes of the created object
+	public Items[] addItem(String itemsName, double cost, int stockCount) {		// creates an Items object and set the attributes of the created object
 
 		this.items[this.totalItemCount] = new Items();
 		this.items[this.totalItemCount].itemName = itemsName;
