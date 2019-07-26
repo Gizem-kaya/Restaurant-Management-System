@@ -71,6 +71,7 @@ capacity stating maximum number of customer it can take for service.
 **Input:**
 
 ```create_table ahmet;4```
+
 **Output:**
 
 ```PROGRESSING COMMAND: create_table```\
