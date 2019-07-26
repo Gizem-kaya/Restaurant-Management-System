@@ -73,7 +73,7 @@ capacity stating maximum number of customer it can take for service.
 ```create_table ahmet;4```
 **Output:**
 
-```PROGRESSING COMMAND: create_table```
+```PROGRESSING COMMAND: create_table```\
 ```A new table has succesfully been added```
 
 In the case i) where non-existing employer attempts to create a new table, ii) where
@@ -87,17 +87,17 @@ as below.
 
 **Output:**
 
-```PROGRESSING COMMAND: create_table```
+```PROGRESSING COMMAND: create_table```\
 ```There is no employer named elif```
 
 **Output:**
 
-```PROGRESSING COMMAND: create_table```
+```PROGRESSING COMMAND: create_table```\
 ```Not allowed to exceed max. number of tables, MAX_TABLES```
 
 **Output:**
 
-```PROGRESSING COMMAND: create_table```
+```PROGRESSING COMMAND: create_table```\
 ```elif has already created ALLOWED_MAX_TABLES tables!```
 
 
@@ -114,15 +114,11 @@ customer, the final parameter lists name-number pairs of items.
 
 **Output:**
 
-```PROGRESSING COMMAND: new_order```
-
-```Table (= ID 0) has been taken into service```
-
-```Item Pizza added into order```
-
-```Item Pizza added into order```
-
-```Item Coke added into order```
+```PROGRESSING COMMAND: new_order```\
+```Table (= ID 0) has been taken into service```\
+```Item Pizza added into order```\
+```Item Pizza added into order```\
+```Item Coke added into order```\
 
 **Input:**
 
@@ -130,35 +126,31 @@ customer, the final parameter lists name-number pairs of items.
 
 **Output:**
 
-```PROGRESSING COMMAND: new_order```
-
-```Table (= ID 2) has been taken into service```
-
-```Item Pizza added into order```
-
-
+```PROGRESSING COMMAND: new_order```\
+```Table (= ID 2) has been taken into service```\
 ```Item Pizza added into order```\
-```Sorry! No Pizza in the stock!```
-```Sorry! No Pizza in the stock!```
-```Sorry! No Pizza in the stock!```
-```Sorry! No Pizza in the stock!```
-```Sorry! No Pizza in the stock!```
-```Sorry! No Pizza in the stock!```
-```Item Coke added into order```
+```Item Pizza added into order```\
+```Sorry! No Pizza in the stock!```\
+```Sorry! No Pizza in the stock!```\
+```Sorry! No Pizza in the stock!```\
+```Sorry! No Pizza in the stock!```\
+```Sorry! No Pizza in the stock!```\
+```Sorry! No Pizza in the stock!```\
+```Item Coke added into order```\
 
 **Output:**
 
-```PROGRESSING COMMAND: new_order```
+```PROGRESSING COMMAND: new_order```\
 ```Not allowed to service max. number of tables, MAX_TABLE_SERVICES```
 
 **Output:**
 
-```PROGRESSING COMMAND: new_order```
+```PROGRESSING COMMAND: new_order```\
 ```There is no appropriate table for this order!```
 
 **Output:**
 
-```PROGRESSING COMMAND: new_order```
+```PROGRESSING COMMAND: new_order```\
 ```There is no waiter named kemal```
 
 **Input:**
@@ -167,9 +159,9 @@ customer, the final parameter lists name-number pairs of items.
 
 **Output:**
 
-```PROGRESSING COMMAND: new_order```
-```Table (= ID 3) has been taken into service```
-```Unknown item Waffle```
+```PROGRESSING COMMAND: new_order```\
+```Table (= ID 3) has been taken into service```\
+```Unknown item Waffle```\
 ```Item Tea added into order```
 
 * _add order [WAITER NAME];[TABLE ID];[ITEM NAME]-[ORDER COUNT]:_ Similar to new order, it inserts another order into a given table which should already be in service. The same warnings in new order should also be displayed in this command except the one regarding MAX TABLE SERVICES as no new table is currently being taken into service. Special to this command, an appropriate message should be displayed as below in the case where a given table is not currently in service or where a waiter other than the one first operated to this table attempts to operate further orders!
@@ -180,19 +172,19 @@ customer, the final parameter lists name-number pairs of items.
 
 **Output:**
 
-```PROGRESSING COMMAND: add_order```
-```Item Water added into order```
+```PROGRESSING COMMAND: add_order```\
+```Item Water added into order```\
 ```Item Coffee added into order```
 
 **Output:**
 
-```PROGRESSING COMMAND: add_order```
-```This table is either not in service now or kemal cannot be```
+```PROGRESSING COMMAND: add_order```\
+```This table is either not in service now or kemal cannot be```\
 ```assigned this table!```
 
 **Output:**
 
-```PROGRESSING COMMAND: add_order```
+```PROGRESSING COMMAND: add_order```\
 ```Not allowed to exceed max number of orders!```
 
 
@@ -205,19 +197,19 @@ otherwise appropriate message should be displayed.
 
 **Output:**
 
-```PROGRESSING COMMAND: check_out```
-```Pizza: 3.000 (x 2) 6.000 $```
-```Coke: 1.500 (x 1) 1.500 $```
-```Water: 0.500 (x 1) 0.500 $```
-```Coffee: 0.750 (x 1) 0.750 $```
-```Donut: 1.250 (x 2) 2.500 $```
-```Tea: 0.200 (x 3) 0.600 $```
+```PROGRESSING COMMAND: check_out```\
+```Pizza: 3.000 (x 2) 6.000 $```\
+```Coke: 1.500 (x 1) 1.500 $```\
+```Water: 0.500 (x 1) 0.500 $```\
+```Coffee: 0.750 (x 1) 0.750 $```\
+```Donut: 1.250 (x 2) 2.500 $```\
+```Tea: 0.200 (x 3) 0.600 $```\
 ```Total: 11.850 $```
 
 **Output:**
 
-```PROGRESSING COMMAND: check_out```
-```This table is either not in service now or kemal cannot be```
+```PROGRESSING COMMAND: check_out```\
+```This table is either not in service now or kemal cannot be```\
 ```assigned this table!```
 
 **Output:**
@@ -233,14 +225,14 @@ otherwise appropriate message should be displayed.
 
 **Output:**
 
-```PROGRESSING COMMAND: stock_status```
-```Pizza: 0```
-```Hamburger: 2```
-```Water: 3```
-```Coke: 4```
-```Coffee: 2```
-```Tea: 5```
-```Donut: 4```
+```PROGRESSING COMMAND: stock_status```\\
+```Pizza: 0```\
+```Hamburger: 2```\
+```Water: 3```\
+```Coke: 4```\
+```Coffee: 2```\
+```Tea: 5```\
+```Donut: 4```\
 ```Doner: 6```
 
 It is seen from the output that stock status of all items (including ones with 0 stock)
@@ -254,10 +246,10 @@ displayed in the case Reserved.
 
 **Input:**
 
-```get_table_status```
-```PROGRESSING COMMAND: get_table_status```
-```Table 0: Free```
-```Table 1: Free```
+```get_table_status```\
+```PROGRESSING COMMAND: get_table_status```\
+```Table 0: Free```\
+```Table 1: Free```\
 ```Table 2: Reserved (kemal)```
 
 
@@ -271,17 +263,17 @@ currently in service.
 
 **Output:**
 
-```PROGRESSING COMMAND: get_order_status```
-```Table: 0```
-```3 order(s)```
-```3 item(s)```
-```2 item(s)```
-```5 item(s)```
-```Table: 1```
-```0 order(s)```
-```Table: 2```
-```1 order(s)```
-```3 item(s)```
+```PROGRESSING COMMAND: get_order_status```\
+```Table: 0```\
+```3 order(s)```\
+```3 item(s)```\
+```2 item(s)```\
+```5 item(s)```\
+```Table: 1```\
+```0 order(s)```\
+```Table: 2```\
+```1 order(s)```\
+```3 item(s)```\
 
 
 * _get employer salary:_ In order to improve motivation, employers (as well as waiter)
@@ -300,9 +292,9 @@ an insertion order.
 
 **Output:*
 
-```PROGRESSING COMMAND: get_employer_salary```
-```Salary for ahmet: 2750.0```
-```Salary for zeynep: 3000.0```
+```PROGRESSING COMMAND: get_employer_salary```\
+```Salary for ahmet: 2750.0```\
+```Salary for zeynep: 3000.0```\
 ```Salary for kamil: 3000.0```
 
 
@@ -321,9 +313,9 @@ net salary (i.e., Sw + Aw) should be displayed for each waiter in an insertion o
 
 **Output:**
 
-```PROGRESSING COMMAND: get_waiter_salary```
-```Salary for kemal: 1440.0```
-```Salary for ayse: 1500.0```
+```PROGRESSING COMMAND: get_waiter_salary```\
+```Salary for kemal: 1440.0```\
+```Salary for ayse: 1500.0```\
 ```Salary for ziya: 1575.0```
 
 
