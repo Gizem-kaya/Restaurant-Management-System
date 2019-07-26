@@ -1,11 +1,11 @@
 # Java Basics
 
-#### The restaurant management software employs Tables, Orders, Items, People (as workers) and
-#### performs some operations depending on the provided commands. It basically relies on two
-#### types of workers to operate: i) employers who only create Tables and ii) waiter who
-#### handles all the stuffs regarding the orders. There are limited number of tables that can only
-#### be created by employer and every table has limited number of orders in which limited number
-#### of items are stored.
+**The restaurant management software employs Tables, Orders, Items, People (as workers) and
+performs some operations depending on the provided commands. It basically relies on two
+types of workers to operate: i) employers who only create Tables and ii) waiter who
+handles all the stuffs regarding the orders. There are limited number of tables that can only
+be created by employer and every table has limited number of orders in which limited number
+of items are stored.**
 
 The workers (employers and waiter) handle all the operations throughout the run.
 Every worker has name, salary, authorization which states permission to create a new table
@@ -17,6 +17,7 @@ employers and MAX WAITER waiters (=5 for both in this study) allowed. Employer s
 not be allowed to create more than ALLOWED MAX TABLES (=2 in this assignment) tables. In
 addition, waiter can deal with no more than MAX TABLE SERVICES (=3 in this assignment)
 tables at any time.
+
 The number of tables created by employers should be limited to MAX TABLES (=5 in this
 assignment). Every table should have an ID that uniquely identifies itself, capacity that states
 maximum number of customers it can take. In addition, it has information stating whether
@@ -38,17 +39,21 @@ add employer (to add a person as employer), and add waiter (to add a person as w
 Below, detailed description of each command is provided with its syntax:
 
 
-* add item: It takes item name, cost for a single item, and number of items that is
+* _add item:_ It takes item name, cost for a single item, and number of items that is
 added into the stock as arguments.
-add item [Name];[Cost];[Amount]
+
+```add item [Name];[Cost];[Amount]```
 
 
-* add employer: It takes employer’s name as well as salary.
-add employer [Name];[Salary]
+* _add employer:_ It takes employer’s name as well as salary.
+
+```add employer [Name];[Salary]```
 
 
-* add waiter: It is similar to addition of a new employer and takes two inputs corresponding waiter’s name and salary.
-add waiter [Name];[Salary]
+* _add waiter:_ It is similar to addition of a new employer and takes two inputs corresponding waiter’s name and salary.
+
+```add waiter [Name];[Salary]```
+
 After it completes initial setup progress, it take another input file, named commands.dat,
 comprising of a set of commands each of which yields different production. In the following;
 each command, with its syntax, is described in detail.
