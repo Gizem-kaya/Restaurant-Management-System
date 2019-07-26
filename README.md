@@ -12,10 +12,10 @@ Every worker has name, salary, authorization which states permission to create a
 or to take any order. Table creation can only be performed by employer whereas orders can
 only be operated by waiter. Therefore, every employer should have also information carrying
 the number of tables that (s)he has created so far. Waiter, however, should carry information
-stating the number of orders operation by him/her. There are maximum MAX EMPLOYER
-employers and MAX WAITER waiters (=5 for both in this study) allowed. Employer should
-not be allowed to create more than ALLOWED MAX TABLES (=2 in this assignment) tables. In
-addition, waiter can deal with no more than MAX TABLE SERVICES (=3 in this assignment)
+stating the number of orders operation by him/her. There are maximum *MAX EMPLOYER*
+employers and *MAX WAITER* waiters (=5 for both in this study) allowed. Employer should
+not be allowed to create more than *ALLOWED MAX TABLES* (=2 in this assignment) tables. In
+addition, waiter can deal with no more than *MAX TABLE SERVICES* (=3 in this assignment)
 tables at any time.
 
   The number of tables created by employers should be limited to *MAX TABLES* (=5 in this
@@ -68,204 +68,254 @@ be initial command so that the remaining commands become meaningful. It takes on
 two parameters; one for name that represents employer as creator, and other for the
 capacity stating maximum number of customer it can take for service.
 
-*Input:*
+**Input:**
 
 ```create_table ahmet;4```
-*Output:*
+**Output:**
 
-```PROGRESSING COMMAND: create_table
-A new table has succesfully been added```
+```PROGRESSING COMMAND: create_table```
+```A new table has succesfully been added```
 
 In the case i) where non-existing employer attempts to create a new table, ii) where
 more than allowed maximum number of tables (MAX TABLES) is being created, or iii)
 where given employer attempts to create more than maximum number of tables allowed to create (ALLOWED MAX TABLES), an appropriate message should be displayed
 as below.
 
-Input:
-create_table elif;2
-Output:
-PROGRESSING COMMAND: create_table
-There is no employer named elif
-Output:
-PROGRESSING COMMAND: create_table
-Not allowed to exceed max. number of tables, MAX_TABLES
-Output:
-PROGRESSING COMMAND: create_table
-elif has already created ALLOWED_MAX_TABLES tables!
+**Input:**
+
+```create_table elif;2```
+
+**Output:**
+
+```PROGRESSING COMMAND: create_table```
+```There is no employer named elif```
+
+**Output:**
+
+```PROGRESSING COMMAND: create_table```
+```Not allowed to exceed max. number of tables, MAX_TABLES```
+
+**Output:**
+
+```PROGRESSING COMMAND: create_table```
+```elif has already created ALLOWED_MAX_TABLES tables!```
 
 
-* new order [WAITER NAME];[#CUSTOMER];[ITEM NAME]-[ORDER COUNT]: It states
+* _new order [WAITER NAME];[#CUSTOMER];[ITEM NAME]-[ORDER COUNT]:_ It states
 the initial order and used when a new customer arrives at the restaurant. Therefore a
 free and appropriate table should first be allocated with this command. It takes three
 parameters. The first represents waiter’s name, the second indicates the number of
 customer, the final parameter lists name-number pairs of items.
 
 
-Input:
-new_order kemal;3;Pizza-2:Coke-1
-Output:
-PROGRESSING COMMAND: new_order
-Table (= ID 0) has been taken into service
-Item Pizza added into order
-Item Pizza added into order
-Item Coke added into order
-Input:
-new_order kemal;4;Pizza-8:Coke-1
-Output:
-PROGRESSING COMMAND: new_order
-Table (= ID 2) has been taken into service
-Item Pizza added into order
-Item Pizza added into order
-Sorry! No Pizza in the stock!
-Sorry! No Pizza in the stock!
-Sorry! No Pizza in the stock!
-Sorry! No Pizza in the stock!
-Sorry! No Pizza in the stock!
-Sorry! No Pizza in the stock!
-Item Coke added into order
-Output:
-PROGRESSING COMMAND: new_order
-Not allowed to service max. number of tables, MAX_TABLE_SERVICES
-Output:
-PROGRESSING COMMAND: new_order
-There is no appropriate table for this order!
-Output:
-PROGRESSING COMMAND: new_order
-There is no waiter named kemal
+**Input:**
 
-Input:
-new_order kemal;1;Waffle-1:Tea-1
-Output:
-PROGRESSING COMMAND: new_order
-Table (= ID 3) has been taken into service
-Unknown item Waffle
-Item Tea added into order
+```new_order kemal;3;Pizza-2:Coke-1```
 
-* add order [WAITER NAME];[TABLE ID];[ITEM NAME]-[ORDER COUNT]: Similar to new order, it inserts another order into a given table which should already be in service. The same warnings in new order should also be displayed in this command except the one regarding MAX TABLE SERVICES as no new table is currently being taken into service. Special to this command, an appropriate message should be displayed as
-below in the case where a given table is not currently in service or where a waiter other than the one first operated to this table attempts to operate further orders!
+**Output:**
 
-Input:
-add_order kemal;0;Water-1:Coffee-1
+```PROGRESSING COMMAND: new_order```
+```Table (= ID 0) has been taken into service```
+```Item Pizza added into order```
+```Item Pizza added into order```
+```Item Coke added into order```
 
-Output:
-PROGRESSING COMMAND: add_order
-Item Water added into order
-Item Coffee added into order
+**Input:**
 
-Output:
-PROGRESSING COMMAND: add_order
-This table is either not in service now or kemal cannot be
-assigned this table!
+```new_order kemal;4;Pizza-8:Coke-1```
 
-Output:
-PROGRESSING COMMAND: add_order
-Not allowed to exceed max number of orders!
+**Output:**
+
+```PROGRESSING COMMAND: new_order```
+```Table (= ID 2) has been taken into service```
+```Item Pizza added into order```
+```Item Pizza added into order```
+```Sorry! No Pizza in the stock!```
+```Sorry! No Pizza in the stock!```
+```Sorry! No Pizza in the stock!```
+```Sorry! No Pizza in the stock!```
+```Sorry! No Pizza in the stock!```
+```Sorry! No Pizza in the stock!```
+```Item Coke added into order```
+
+**Output:**
+
+```PROGRESSING COMMAND: new_order```
+```Not allowed to service max. number of tables, MAX_TABLE_SERVICES```
+
+**Output:**
+
+```PROGRESSING COMMAND: new_order```
+```There is no appropriate table for this order!```
+
+**Output:**
+
+```PROGRESSING COMMAND: new_order```
+```There is no waiter named kemal```
+
+**Input:**
+
+```new_order kemal;1;Waffle-1:Tea-1```
+
+**Output:**
+
+```PROGRESSING COMMAND: new_order```
+```Table (= ID 3) has been taken into service```
+```Unknown item Waffle```
+```Item Tea added into order```
+
+* _add order [WAITER NAME];[TABLE ID];[ITEM NAME]-[ORDER COUNT]:_ Similar to new order, it inserts another order into a given table which should already be in service. The same warnings in new order should also be displayed in this command except the one regarding MAX TABLE SERVICES as no new table is currently being taken into service. Special to this command, an appropriate message should be displayed as below in the case where a given table is not currently in service or where a waiter other than the one first operated to this table attempts to operate further orders!
+
+**Input:**
+
+```add_order kemal;0;Water-1:Coffee-1```
+
+**Output:**
+
+```PROGRESSING COMMAND: add_order```
+```Item Water added into order```
+```Item Coffee added into order```
+
+**Output:**
+
+```PROGRESSING COMMAND: add_order```
+```This table is either not in service now or kemal cannot be```
+```assigned this table!```
+
+**Output:**
+
+```PROGRESSING COMMAND: add_order```
+```Not allowed to exceed max number of orders!```
 
 
-* check out [WAITER NAME];[TABLE ID]: It indicates a case where customers taking service at table TABLE ID want to checkout. As expressed in previous command,
-only waiter who operated to table with TABLE ID is allowed to carry out this command,
+* _check out [WAITER NAME];[TABLE ID]:_ It indicates a case where customers taking service at table TABLE ID want to checkout. As expressed in previous command, only waiter who operated to table with TABLE ID is allowed to carry out this command,
 otherwise appropriate message should be displayed.
 
-Input:
-check_out kemal;1
-Output:
-PROGRESSING COMMAND: check_out
-Pizza: 3.000 (x 2) 6.000 $
-Coke: 1.500 (x 1) 1.500 $
-Water: 0.500 (x 1) 0.500 $
-Coffee: 0.750 (x 1) 0.750 $
-Donut: 1.250 (x 2) 2.500 $
-Tea: 0.200 (x 3) 0.600 $
-Total: 11.850 $
-Output:
-PROGRESSING COMMAND: check_out
-This table is either not in service now or kemal cannot be
-assigned this table!
-Output:
-There is no waiter named kemal
+**Input:**
+
+```check_out kemal;1```
+
+**Output:**
+
+```PROGRESSING COMMAND: check_out```
+```Pizza: 3.000 (x 2) 6.000 $```
+```Coke: 1.500 (x 1) 1.500 $```
+```Water: 0.500 (x 1) 0.500 $```
+```Coffee: 0.750 (x 1) 0.750 $```
+```Donut: 1.250 (x 2) 2.500 $```
+```Tea: 0.200 (x 3) 0.600 $```
+```Total: 11.850 $```
+
+**Output:**
+
+```PROGRESSING COMMAND: check_out```
+```This table is either not in service now or kemal cannot be```
+```assigned this table!```
+
+**Output:**
+
+```There is no waiter named kemal```
 
 
-* stock status: It simply displays the stock amount of all items.
-Input:
-stock_status
-Output:
-PROGRESSING COMMAND: stock_status
-Pizza: 0
-Hamburger: 2
-Water: 3
-Coke: 4
-Coffee: 2
-Tea: 5
-Donut: 4
-Doner: 6
+* _stock status:_ It simply displays the stock amount of all items.
+
+**Input:**
+
+```stock_status```
+
+**Output:**
+
+```PROGRESSING COMMAND: stock_status```
+```Pizza: 0```
+```Hamburger: 2```
+```Water: 3```
+```Coke: 4```
+```Coffee: 2```
+```Tea: 5```
+```Donut: 4```
+```Doner: 6```
+
 It is seen from the output that stock status of all items (including ones with 0 stock)
 should be displayed in insertion order.
 
 
 
-* get table status: It prints out all created tables with its current status (Free, or
+* _get table status:_ It prints out all created tables with its current status (Free, or
 Reserved) in an insertion order as below. Note that, waiter’s name should also be
 displayed in the case Reserved.
 
-Input:
-get_table_status
-PROGRESSING COMMAND: get_table_status
-Table 0: Free
-Table 1: Free
-Table 2: Reserved (kemal)
+**Input:**
+
+```get_table_status```
+```PROGRESSING COMMAND: get_table_status```
+```Table 0: Free```
+```Table 1: Free```
+```Table 2: Reserved (kemal)```
 
 
-* get order status: It prints out information regarding table-order-item trio in an
+* _get order status:_ It prints out information regarding table-order-item trio in an
 insertion order as below. Note that, table should also be displayed even if it is not
 currently in service.
 
-Input:
-get_order_status
-Output:
-PROGRESSING COMMAND: get_order_status
-Table: 0
-3 order(s)
-3 item(s)
-2 item(s)
-5 item(s)
-Table: 1
-0 order(s)
-Table: 2
-1 order(s)
-3 item(s)
+**Input:**
+
+```get_order_status```
+
+**Output:**
+
+```PROGRESSING COMMAND: get_order_status```
+```Table: 0```
+```3 order(s)```
+```3 item(s)```
+```2 item(s)```
+```5 item(s)```
+```Table: 1```
+```0 order(s)```
+```Table: 2```
+```1 order(s)```
+```3 item(s)```
 
 
-* get employer salary: In order to improve motivation, employers (as well as waiter)
+* _get employer salary:_ In order to improve motivation, employers (as well as waiter)
 are awarded (as additional payment to their salary) every time they create a table. Total
 award (A) for an employer e should be calculated as follows:
+
                             Ae = Te × Se × 0.1
+                            
 where Te and Se represent total number of tables created by employer e and the salary
-for employer e, respectively.
-With this command, net salary (i.e., Se + Ae) should be displayed for each employer in
+for employer e, respectively. With this command, net salary (i.e., Se + Ae) should be displayed for each employer in
 an insertion order.
 
-Input:
-get_employer_salary
-Output:
-PROGRESSING COMMAND: get_employer_salary
-Salary for ahmet: 2750.0
-Salary for zeynep: 3000.0
-Salary for kamil: 3000.0
+**Input:**
+
+```get_employer_salary```
+
+**Output:*
+
+```PROGRESSING COMMAND: get_employer_salary```
+```Salary for ahmet: 2750.0```
+```Salary for zeynep: 3000.0```
+```Salary for kamil: 3000.0```
 
 
-* get waiter salary: It is very similar to get employer salary but differs only in
+* _get waiter salary:_ It is very similar to get employer salary but differs only in
 calculation, which should now be as follows for a waiter w:
+
                             Aw = Ow × Sw × 0.05
+                            
 where Ow is total number of orders operated by waiter w. As in previous command,
 net salary (i.e., Sw + Aw) should be displayed for each waiter in an insertion order.
 
 
-Input:
-get_waiter_salary
-Output:
-PROGRESSING COMMAND: get_waiter_salary
-Salary for kemal: 1440.0
-Salary for ayse: 1500.0
-Salary for ziya: 1575.0
+**Input:**
+
+```get_waiter_salary```
+
+**Output:**
+
+```PROGRESSING COMMAND: get_waiter_salary```
+```Salary for kemal: 1440.0```
+```Salary for ayse: 1500.0```
+```Salary for ziya: 1575.0```
 
 
