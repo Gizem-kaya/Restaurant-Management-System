@@ -118,7 +118,7 @@ customer, the final parameter lists name-number pairs of items.
 ```Table (= ID 0) has been taken into service```\
 ```Item Pizza added into order```\
 ```Item Pizza added into order```\
-```Item Coke added into order```\
+```Item Coke added into order```
 
 **Input:**
 
@@ -136,7 +136,7 @@ customer, the final parameter lists name-number pairs of items.
 ```Sorry! No Pizza in the stock!```\
 ```Sorry! No Pizza in the stock!```\
 ```Sorry! No Pizza in the stock!```\
-```Item Coke added into order```\
+```Item Coke added into order```
 
 **Output:**
 
