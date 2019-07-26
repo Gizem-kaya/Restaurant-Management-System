@@ -1,13 +1,13 @@
 # Java Basics
 
-**The restaurant management software employs Tables, Orders, Items, People (as workers) and
+  **The restaurant management software employs Tables, Orders, Items, People (as workers) and
 performs some operations depending on the provided commands. It basically relies on two
 types of workers to operate: i) employers who only create Tables and ii) waiter who
 handles all the stuffs regarding the orders. There are limited number of tables that can only
 be created by employer and every table has limited number of orders in which limited number
 of items are stored.**
 
-The workers (employers and waiter) handle all the operations throughout the run.
+  The workers (employers and waiter) handle all the operations throughout the run.
 Every worker has name, salary, authorization which states permission to create a new table
 or to take any order. Table creation can only be performed by employer whereas orders can
 only be operated by waiter. Therefore, every employer should have also information carrying
@@ -18,14 +18,14 @@ not be allowed to create more than ALLOWED MAX TABLES (=2 in this assignment) ta
 addition, waiter can deal with no more than MAX TABLE SERVICES (=3 in this assignment)
 tables at any time.
 
-The number of tables created by employers should be limited to MAX TABLES (=5 in this
+  The number of tables created by employers should be limited to *MAX TABLES* (=5 in this
 assignment). Every table should have an ID that uniquely identifies itself, capacity that states
 maximum number of customers it can take. In addition, it has information stating whether
 it is currently in service or not. The creator as well as the waiter information should also
 be stored within the table. As stated previously, every table possesses order information and
-maximum MAX ORDERS (=5 in this assignment) orders should be provided.
+maximum *MAX ORDERS* (=5 in this assignment) orders should be provided.
 An order simply records every items that are ordered by customer and there should not be
-more than MAX ITEMS (=10 in this assignment) within a single order! Finally, every item
+more than *MAX ITEMS* (=10 in this assignment) within a single order! Finally, every item
 should have name, cost, and amount information which states its name, cost, and the stock
 amount, respectively.
 
@@ -63,19 +63,24 @@ each command, with its syntax, is described in detail.
 # Commands
 
 
-* create table [EMPLOYER NAME];[CAPACITY]: It creates a new table. It should
+* _create table [EMPLOYER NAME];[CAPACITY]:_ It creates a new table. It should
 be initial command so that the remaining commands become meaningful. It takes only
 two parameters; one for name that represents employer as creator, and other for the
 capacity stating maximum number of customer it can take for service.
-Input:
-create_table ahmet;4
-Output:
-PROGRESSING COMMAND: create_table
-A new table has succesfully been added
+
+*Input:*
+
+```create_table ahmet;4```
+*Output:*
+
+```PROGRESSING COMMAND: create_table
+A new table has succesfully been added```
+
 In the case i) where non-existing employer attempts to create a new table, ii) where
 more than allowed maximum number of tables (MAX TABLES) is being created, or iii)
 where given employer attempts to create more than maximum number of tables allowed to create (ALLOWED MAX TABLES), an appropriate message should be displayed
 as below.
+
 Input:
 create_table elif;2
 Output:
