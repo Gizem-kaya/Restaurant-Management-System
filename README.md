@@ -1,11 +1,11 @@
-# Java
+# Java Basics
 
-The restaurant management software employs Tables, Orders, Items, People (as workers) and
-performs some operations depending on the provided commands. It basically relies on two
-types of workers to operate: i) employers who only create Tables and ii) waiter who
-handles all the stuffs regarding the orders. There are limited number of tables that can only
-be created by employer and every table has limited number of orders in which limited number
-of items are stored.
+#### The restaurant management software employs Tables, Orders, Items, People (as workers) and
+#### performs some operations depending on the provided commands. It basically relies on two
+#### types of workers to operate: i) employers who only create Tables and ii) waiter who
+#### handles all the stuffs regarding the orders. There are limited number of tables that can only
+#### be created by employer and every table has limited number of orders in which limited number
+#### of items are stored.
 
 The workers (employers and waiter) handle all the operations throughout the run.
 Every worker has name, salary, authorization which states permission to create a new table
