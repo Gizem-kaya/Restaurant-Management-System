@@ -131,9 +131,13 @@ customer, the final parameter lists name-number pairs of items.
 **Output:**
 
 ```PROGRESSING COMMAND: new_order```
+
 ```Table (= ID 2) has been taken into service```
+
 ```Item Pizza added into order```
-```Item Pizza added into order```
+
+
+```Item Pizza added into order```\
 ```Sorry! No Pizza in the stock!```
 ```Sorry! No Pizza in the stock!```
 ```Sorry! No Pizza in the stock!```
