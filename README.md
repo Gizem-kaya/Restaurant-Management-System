@@ -1,4 +1,4 @@
-# Java Basics
+# The Restaurant Management System in JAVA
 
   **The restaurant management software employs Tables, Orders, Items, People (as workers) and performs some operations depending on the provided commands. It basically relies on two types of workers to operate: i) employers who only create Tables and ii) waiter who
 handles all the stuffs regarding the orders. There are limited number of tables that can only be created by employer and every table has limited number of orders in which limited number of items are stored.**
