@@ -1,33 +1,11 @@
 # Java Basics
 
-  **The restaurant management software employs Tables, Orders, Items, People (as workers) and
-performs some operations depending on the provided commands. It basically relies on two
-types of workers to operate: i) employers who only create Tables and ii) waiter who
-handles all the stuffs regarding the orders. There are limited number of tables that can only
-be created by employer and every table has limited number of orders in which limited number
-of items are stored.**
+  **The restaurant management software employs Tables, Orders, Items, People (as workers) and performs some operations depending on the provided commands. It basically relies on two types of workers to operate: i) employers who only create Tables and ii) waiter who
+handles all the stuffs regarding the orders. There are limited number of tables that can only be created by employer and every table has limited number of orders in which limited number of items are stored.**
 
-  The workers (employers and waiter) handle all the operations throughout the run.
-Every worker has name, salary, authorization which states permission to create a new table
-or to take any order. Table creation can only be performed by employer whereas orders can
-only be operated by waiter. Therefore, every employer should have also information carrying
-the number of tables that (s)he has created so far. Waiter, however, should carry information
-stating the number of orders operation by him/her. There are maximum *MAX EMPLOYER*
-employers and *MAX WAITER* waiters (=5 for both in this study) allowed. Employer should
-not be allowed to create more than *ALLOWED MAX TABLES* (=2 in this assignment) tables. In
-addition, waiter can deal with no more than *MAX TABLE SERVICES* (=3 in this assignment)
-tables at any time.
+    The workers (employers and waiter) handle all the operations throughout the run. Every worker has name, salary, authorization which states permission to create a new table or to take any order. Table creation can only be performed by employer whereas orders can only be operated by waiter. Therefore, every employer should have also information carrying the number of tables that (s)he has created so far. Waiter, however, should carry information stating the number of orders operation by him/her. There are maximum *MAX EMPLOYER* employers and *MAX WAITER* waiters (=5 for both in this study) allowed. Employer should not be allowed to create more than *ALLOWED MAX TABLES* (=2 in this project) tables. In addition, waiter can deal with no more than *MAX TABLE SERVICES* (=3 in this project) tables at any time.
 
-  The number of tables created by employers should be limited to *MAX TABLES* (=5 in this
-assignment). Every table should have an ID that uniquely identifies itself, capacity that states
-maximum number of customers it can take. In addition, it has information stating whether
-it is currently in service or not. The creator as well as the waiter information should also
-be stored within the table. As stated previously, every table possesses order information and
-maximum *MAX ORDERS* (=5 in this assignment) orders should be provided.
-An order simply records every items that are ordered by customer and there should not be
-more than *MAX ITEMS* (=10 in this assignment) within a single order! Finally, every item
-should have name, cost, and amount information which states its name, cost, and the stock
-amount, respectively.
+    The number of tables created by employers should be limited to *MAX TABLES* (=5 in this assignment). Every table should have an ID that uniquely identifies itself, capacity that states maximum number of customers it can take. In addition, it has information stating whether it is currently in service or not. The creator as well as the waiter information should also be stored within the table. As stated previously, every table possesses order information and maximum *MAX ORDERS* (=5 in this assignment) orders should be provided. An order simply records every items that are ordered by customer and there should not be more than *MAX ITEMS* (=10 in this assignment) within a single order! Finally, every item should have name, cost, and amount information which states its name, cost, and the stock amount, respectively.
 
 
 # Initialization
