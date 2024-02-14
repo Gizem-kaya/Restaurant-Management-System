@@ -8,6 +8,4 @@ public class Employer extends People {
 	
 	public void incrementTableCount() {this.tableCount = this.tableCount + 1;}			// increment the employer's tableCount by 1
 	
-
-	
 }

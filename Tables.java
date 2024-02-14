@@ -10,8 +10,6 @@ public class Tables {
 	public String waiter;			// the table's waiter
 	public Orders[] orders;			// the table's order list
 	
-
-	
 	// getters and setters for the objects attributes
 	
 	public int getID() {return ID;}
@@ -64,9 +62,5 @@ public class Tables {
 	
 		
 	}
-	
-	
-	
-	
 	
 }

@@ -13,6 +13,5 @@ public class Waiter extends People {
 	public int getTableCount() {return tableCount;}
 	public void setTableCount(int newTableCount) { this.tableCount = newTableCount; }
 	
-	
 	public void incrementTableCount() {this.tableCount = this.tableCount + 1;}			// increment the table count of the waiter
 }

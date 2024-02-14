@@ -11,7 +11,6 @@ public class Orders {
 	private void incrementItemCount() {this.totalItemCount = this.totalItemCount + 1;}	//increment the order's item counts by 1
 	
 	
-	
 	public Items[] createItemsList() {			// creates the order's item array
 
 		this.items = new Items[MAX_ITEMS];
